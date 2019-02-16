@@ -1,0 +1,74 @@
+<div class="main">
+  <div class="loading">
+    <div class="container">
+      <form
+        id="formSignin"
+        (submit)="
+          handleSubmit({
+            username: username.value,
+            password: password.value
+          })
+        "
+        class="form-signin"
+        [formGroup]="angForm"
+      >
+        <div style="text-align: center ">
+          <img
+            src="https://cdn.dribbble.com/users/1769954/screenshots/4953805/artboard_1.png"
+            alt="Logo"
+            height="225px"
+            width="300px"
+          />
+        </div>
+        <label class="sr-only">Username</label>
+        <input
+          type="text"
+          id="inputEmail"
+          name="email"
+          class="form-control"
+          id="inputStyle"
+          placeholder="Username"
+          required
+          autoFocus
+          formControlName="username"
+          #username
+        />
+        <label class="sr-only">Password</label>
+
+        <input
+          name="password"
+          type="password"
+          id="inputPassword"
+          class="form-control"
+          id="inputPassword"
+          placeholder="Password"
+          required
+          formControlName="password"
+          #password
+        />
+        <div>
+          <button
+            id="button-login"
+            class="btn btn-md btn-primary btn-block"
+            type="submit"
+            *ngIf="!angForm.valid"
+            [disabled]="!angForm.valid"
+            style="background-color: darkgrey"
+          >
+            Sign in
+          </button>
+          <button
+            id="button-login"
+            class="btn btn-md btn-primary btn-block"
+            type="submit"
+            *ngIf="angForm.valid"
+          >
+            Sign in
+          </button>
+        </div>
+
+        <br />
+      </form>
+    </div>
+  </div>
+</div>
