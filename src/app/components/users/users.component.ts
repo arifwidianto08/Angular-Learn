@@ -24,7 +24,6 @@ export class UsersComponent implements OnInit {
         console.log(error);
       }
     );
-    console.log(this.usersData);
   }
 
   logOut() {
