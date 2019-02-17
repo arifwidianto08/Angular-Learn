@@ -12,6 +12,7 @@ import { AppComponent } from "./app.component";
 import { UsersComponent } from "./components/users/users.component";
 import { HomeComponent } from "./components/home/home.component";
 import { LoginpageComponent } from "./components/loginpage/loginpage.component";
+import { TodosComponent } from "./components/todos/todos.component";
 
 // Import Services
 import { AuthService } from "./services/auth/auth.service";
@@ -23,7 +24,8 @@ import { UsersDataService } from "./services/users/users-data.service";
     AppComponent,
     UsersComponent,
     HomeComponent,
-    LoginpageComponent
+    LoginpageComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
